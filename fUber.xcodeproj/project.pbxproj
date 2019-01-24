@@ -60,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2020E41921F9ABFF003401FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2020E41E21F9AC16003401FB /* RequestsService.swift */,
+			);
+			name = Controller;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		4137D2E80383511C37C93964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,14 +92,6 @@
 				2020E41C21F9AC16003401FB /* RequestsTableCell.xib */,
 			);
 			path = RequestsTableCell;
-			sourceTree = "<group>";
-		};
-		5E6AF9DA21FA2C1400A3B5DC /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				2020E41E21F9AC16003401FB /* RequestsService.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		9CFFCCD53690FF76DEFE0EC5 /* Pods */ = {
@@ -173,7 +174,7 @@
 			children = (
 				5E6AF9D821FA2A1F00A3B5DC /* Model */,
 				C920C69821F89A2200E553ED /* View */,
-				5E6AF9DA21FA2C1400A3B5DC /* Controller */,
+				2020E41921F9ABFF003401FB /* Controller */,
 				C96EA65A21F8DB4F000517A3 /* Extensions */,
 				C920C6AA21F8CDF700E553ED /* Utils */,
 				C920C69921F89A3000E553ED /* Supporting Files */,
