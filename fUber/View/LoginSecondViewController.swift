@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class LoginSecondViewController: UIViewController {
+    let loginStackDispatchQueue = DispatchQueue(label: "Login", qos: .userInitiated)
 
     // MARK: IBOutlets
     
@@ -21,16 +22,27 @@ class LoginSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginButton.layer.masksToBounds = true
-        registerButton.layer.masksToBounds = true
-        loginButton.layer.cornerRadius = 20
-        registerButton.layer.cornerRadius = 20
+        loginButton?.layer.masksToBounds = true
+        registerButton?.layer.masksToBounds = true
+        loginButton?.layer.cornerRadius = 20
+        registerButton?.layer.cornerRadius = 20
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     // MARK: Actions
     
     @IBAction func logginTapped(_ sender: Any) {
-        if let email = emailTextField.text, let password = passwordTextField.text {
+        onData()
+    }
+    
+    func onData() {
+        guard let email = emailTextField?.text, let password = passwordTextField?.text else {
+            return
+        }
+        
+        let createUser = DispatchWorkItem {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                 if let firebaseError = error {
                     print(firebaseError.localizedDescription)
@@ -39,16 +51,33 @@ class LoginSecondViewController: UIViewController {
                 
                 let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
                 
-                self.present(mainTabController, animated: true, completion: nil)
-                
-                print("success")
+                DispatchQueue.main.async {
+                    self.present(mainTabController, animated: true, completion: nil)
+                }
             })
         }
+        
+        loginStackDispatchQueue.async(execute: createUser)
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {
         performSegue(withIdentifier: "createAccountDummy", sender: nil)
-
     }
     
+}
+
+extension LoginSecondViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if (textField == emailTextField) {
+            passwordTextField.becomeFirstResponder()
+        }
+        else if (textField == passwordTextField) {
+            onData()
+        }
+        
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }
