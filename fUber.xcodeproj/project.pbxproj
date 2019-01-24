@@ -12,19 +12,14 @@
 		2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2020E41C21F9AC16003401FB /* RequestsTableCell.xib */; };
 		2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41D21F9AC16003401FB /* RequestsTableVC.swift */; };
 		2020E42321F9AC16003401FB /* RequestsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41E21F9AC16003401FB /* RequestsService.swift */; };
-		207DAF8F21FA524F00BC0EF1 /* NewRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207DAF8E21FA524F00BC0EF1 /* NewRequestView.xib */; };
-		207DAF9121FA526700BC0EF1 /* NewRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9021FA526700BC0EF1 /* NewRequestView.swift */; };
-		207DAF9321FA527100BC0EF1 /* CustomXIBUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9221FA527100BC0EF1 /* CustomXIBUIView.swift */; };
-		207DAF9521FA53D500BC0EF1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9421FA53D500BC0EF1 /* UserInfoView.swift */; };
-		207DAF9721FA541F00BC0EF1 /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207DAF9621FA541F00BC0EF1 /* UserInfoView.xib */; };
+		207DAF9B21FA646500BC0EF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */; };
+		207DAF9D21FA671800BC0EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207DAF9C21FA671800BC0EF1 /* Main.storyboard */; };
 		5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */; };
 		C920C68C21F8663600E553ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C920C68B21F8663600E553ED /* Assets.xcassets */; };
 		C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920C6A821F8A4B200E553ED /* UITextField+Extension.swift */; };
 		C920C6AE21F8D14B00E553ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C920C6AD21F8D14B00E553ED /* GoogleService-Info.plist */; };
 		C96EA65E21F8DBCC000517A3 /* LoginSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */; };
 		C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA1F3321F7C4FB0095A0A8 /* AppDelegate.swift */; };
-		C9DA1F3621F7C4FB0095A0A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA1F3521F7C4FB0095A0A8 /* LoginViewController.swift */; };
-		C9DA1F3921F7C4FB0095A0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DA1F3721F7C4FB0095A0A8 /* Main.storyboard */; };
 		C9DA1F3E21F7C4FC0095A0A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DA1F3C21F7C4FC0095A0A8 /* LaunchScreen.storyboard */; };
 		CD6FC94D44CBA88311ADF52E /* Pods_fUber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E879D7C2849307AB7E0933B /* Pods_fUber.framework */; };
 /* End PBXBuildFile section */
@@ -35,11 +30,8 @@
 		2020E41C21F9AC16003401FB /* RequestsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestsTableCell.xib; sourceTree = "<group>"; };
 		2020E41D21F9AC16003401FB /* RequestsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsTableVC.swift; sourceTree = "<group>"; };
 		2020E41E21F9AC16003401FB /* RequestsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsService.swift; sourceTree = "<group>"; };
-		207DAF8E21FA524F00BC0EF1 /* NewRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewRequestView.xib; path = fUber/View/NewRequestView.xib; sourceTree = SOURCE_ROOT; };
-		207DAF9021FA526700BC0EF1 /* NewRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewRequestView.swift; path = fUber/View/NewRequestView.swift; sourceTree = SOURCE_ROOT; };
-		207DAF9221FA527100BC0EF1 /* CustomXIBUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomXIBUIView.swift; path = fUber/View/CustomXIBUIView.swift; sourceTree = SOURCE_ROOT; };
-		207DAF9421FA53D500BC0EF1 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
-		207DAF9621FA541F00BC0EF1 /* UserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
+		207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = fUber/View/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		207DAF9C21FA671800BC0EF1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		381B4795435860142CCD1792 /* Pods-fUber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fUber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fUber/Pods-fUber.debug.xcconfig"; sourceTree = "<group>"; };
 		5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		61C6A33E2DA38F659F47341B /* Pods-fUber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fUber.release.xcconfig"; path = "Pods/Target Support Files/Pods-fUber/Pods-fUber.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,8 +42,6 @@
 		C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSecondViewController.swift; sourceTree = "<group>"; };
 		C9DA1F3021F7C4FB0095A0A8 /* fUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DA1F3321F7C4FB0095A0A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9DA1F3521F7C4FB0095A0A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C9DA1F3821F7C4FB0095A0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9DA1F3D21F7C4FC0095A0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9DA1F3F21F7C4FC0095A0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,12 +61,8 @@
 		207DAF8D21FA521900BC0EF1 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				207DAF9221FA527100BC0EF1 /* CustomXIBUIView.swift */,
-				207DAF9021FA526700BC0EF1 /* NewRequestView.swift */,
-				207DAF8E21FA524F00BC0EF1 /* NewRequestView.xib */,
-				207DAF9421FA53D500BC0EF1 /* UserInfoView.swift */,
-				207DAF9621FA541F00BC0EF1 /* UserInfoView.xib */,
 				2020E41D21F9AC16003401FB /* RequestsTableVC.swift */,
+				207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -128,10 +114,9 @@
 			children = (
 				207DAF8D21FA521900BC0EF1 /* Tabs */,
 				5E6AF9D921FA2A3D00A3B5DC /* RequestsTableCell */,
-				C9DA1F3521F7C4FB0095A0A8 /* LoginViewController.swift */,
 				C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */,
 				5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */,
-				C9DA1F3721F7C4FB0095A0A8 /* Main.storyboard */,
+				207DAF9C21FA671800BC0EF1 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,12 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */,
-				207DAF8F21FA524F00BC0EF1 /* NewRequestView.xib in Resources */,
 				C9DA1F3E21F7C4FC0095A0A8 /* LaunchScreen.storyboard in Resources */,
+				207DAF9D21FA671800BC0EF1 /* Main.storyboard in Resources */,
 				C920C6AE21F8D14B00E553ED /* GoogleService-Info.plist in Resources */,
-				207DAF9721FA541F00BC0EF1 /* UserInfoView.xib in Resources */,
 				C920C68C21F8663600E553ED /* Assets.xcassets in Resources */,
-				C9DA1F3921F7C4FB0095A0A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +261,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-fUber/Pods-fUber-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -286,6 +270,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,15 +309,12 @@
 			files = (
 				C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */,
 				2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */,
-				C9DA1F3621F7C4FB0095A0A8 /* LoginViewController.swift in Sources */,
-				207DAF9321FA527100BC0EF1 /* CustomXIBUIView.swift in Sources */,
 				C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */,
 				5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */,
 				2020E41F21F9AC16003401FB /* RequestsTableCell.swift in Sources */,
 				2020E42021F9AC16003401FB /* Request.swift in Sources */,
 				C96EA65E21F8DBCC000517A3 /* LoginSecondViewController.swift in Sources */,
-				207DAF9521FA53D500BC0EF1 /* UserInfoView.swift in Sources */,
-				207DAF9121FA526700BC0EF1 /* NewRequestView.swift in Sources */,
+				207DAF9B21FA646500BC0EF1 /* ProfileViewController.swift in Sources */,
 				2020E42321F9AC16003401FB /* RequestsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,14 +322,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C9DA1F3721F7C4FB0095A0A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9DA1F3821F7C4FB0095A0A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C9DA1F3C21F7C4FC0095A0A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

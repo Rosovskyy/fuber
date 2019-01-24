@@ -23,7 +23,7 @@ class CustomXIBUIView: UIView {
         commonInit()
     }
     
-    private func commonInit() {
+    func commonInit() {
         let bundle = Bundle(for: type(of: self))
         bundle.loadNibNamed(self.xibName, owner: self, options: nil)
         

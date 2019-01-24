@@ -1,29 +1,31 @@
 //
-//  UserInfoView.swift
+//  ProfileViewController.swift
 //  fUber
 //
-//  Created by user151091 on 1/24/19.
+//  Created by Serhiy Rosovskyy on 1/24/19.
 //  Copyright © 2019 Serhiy Rosovskyy. All rights reserved.
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
-class UserInfoView: CustomXIBUIView {
+class ProfileViewController: UIViewController {
+
+    // MARK: IBOutlets
     @IBOutlet weak var imageProfile: UIImageView!
-    override var xibName: String { return "UserInfoView" }
     
-    override func commonInit() {
-        commonInit()
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
         imageProfile.layer.cornerRadius = imageProfile.frame.size.width / 2
         imageProfile.clipsToBounds = true
     }
     
-
-    @IBAction func signOut(_ sender: Any) {
+    // MARK: Actions
+    
+    @IBAction func signOutTapped(_ sender: Any) {
         try? Auth.auth().signOut()
-        
         performSegue(withIdentifier: "profileSignOutDummy", sender: nil)
     }
+    
 }

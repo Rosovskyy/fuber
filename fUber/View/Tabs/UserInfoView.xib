@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoView" customModule="fUber" customModuleProvider="target">
             <connections>
+                <outlet property="imageProfile" destination="pej-4R-z9e" id="CtN-cU-zRt"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kgh-ui-TIg"/>
             </connections>
         </placeholder>
@@ -20,16 +21,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyM-8x-MKy">
-                    <rect key="frame" x="133" y="92" width="70" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7x-RF-30B">
+                    <rect key="frame" x="149.5" y="561" width="76" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Sign Out">
+                        <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="signOut:" destination="-1" eventType="touchUpInside" id="sGc-Yy-CeD"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="pej-4R-z9e">
+                    <rect key="frame" x="137.5" y="120" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Cj7-DO-3RF"/>
+                        <constraint firstAttribute="width" constant="100" id="aqG-WM-jm9"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pej-4R-z9e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8e3-Vb-ngo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E7x-RF-30B" secondAttribute="bottom" constant="70" id="KvB-9q-WIg"/>
+                <constraint firstItem="E7x-RF-30B" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="T9W-lY-cSf"/>
+                <constraint firstItem="pej-4R-z9e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="V7q-mc-WNp"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
+    <resources>
+        <image name="Profile" width="512" height="512"/>
+    </resources>
 </document>

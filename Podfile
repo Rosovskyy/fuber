@@ -8,5 +8,6 @@ target 'fUber' do
   # Pods for fUber
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end
