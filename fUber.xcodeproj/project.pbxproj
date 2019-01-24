@@ -12,10 +12,14 @@
 		2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2020E41C21F9AC16003401FB /* RequestsTableCell.xib */; };
 		2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41D21F9AC16003401FB /* RequestsTableVC.swift */; };
 		2020E42321F9AC16003401FB /* RequestsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41E21F9AC16003401FB /* RequestsService.swift */; };
+		207DAF8F21FA524F00BC0EF1 /* NewRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207DAF8E21FA524F00BC0EF1 /* NewRequestView.xib */; };
+		207DAF9121FA526700BC0EF1 /* NewRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9021FA526700BC0EF1 /* NewRequestView.swift */; };
+		207DAF9321FA527100BC0EF1 /* CustomXIBUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9221FA527100BC0EF1 /* CustomXIBUIView.swift */; };
+		207DAF9521FA53D500BC0EF1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9421FA53D500BC0EF1 /* UserInfoView.swift */; };
+		207DAF9721FA541F00BC0EF1 /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207DAF9621FA541F00BC0EF1 /* UserInfoView.xib */; };
 		5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */; };
 		C920C68C21F8663600E553ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C920C68B21F8663600E553ED /* Assets.xcassets */; };
 		C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920C6A821F8A4B200E553ED /* UITextField+Extension.swift */; };
-		C920C6AC21F8CE0100E553ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920C6AB21F8CE0100E553ED /* Constants.swift */; };
 		C920C6AE21F8D14B00E553ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C920C6AD21F8D14B00E553ED /* GoogleService-Info.plist */; };
 		C96EA65E21F8DBCC000517A3 /* LoginSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */; };
 		C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA1F3321F7C4FB0095A0A8 /* AppDelegate.swift */; };
@@ -31,13 +35,17 @@
 		2020E41C21F9AC16003401FB /* RequestsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestsTableCell.xib; sourceTree = "<group>"; };
 		2020E41D21F9AC16003401FB /* RequestsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsTableVC.swift; sourceTree = "<group>"; };
 		2020E41E21F9AC16003401FB /* RequestsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsService.swift; sourceTree = "<group>"; };
+		207DAF8E21FA524F00BC0EF1 /* NewRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewRequestView.xib; path = fUber/View/NewRequestView.xib; sourceTree = SOURCE_ROOT; };
+		207DAF9021FA526700BC0EF1 /* NewRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewRequestView.swift; path = fUber/View/NewRequestView.swift; sourceTree = SOURCE_ROOT; };
+		207DAF9221FA527100BC0EF1 /* CustomXIBUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomXIBUIView.swift; path = fUber/View/CustomXIBUIView.swift; sourceTree = SOURCE_ROOT; };
+		207DAF9421FA53D500BC0EF1 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		207DAF9621FA541F00BC0EF1 /* UserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
 		381B4795435860142CCD1792 /* Pods-fUber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fUber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fUber/Pods-fUber.debug.xcconfig"; sourceTree = "<group>"; };
 		5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		61C6A33E2DA38F659F47341B /* Pods-fUber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fUber.release.xcconfig"; path = "Pods/Target Support Files/Pods-fUber/Pods-fUber.release.xcconfig"; sourceTree = "<group>"; };
 		6E879D7C2849307AB7E0933B /* Pods_fUber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fUber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C920C68B21F8663600E553ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C920C6A821F8A4B200E553ED /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		C920C6AB21F8CE0100E553ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C920C6AD21F8D14B00E553ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSecondViewController.swift; sourceTree = "<group>"; };
 		C9DA1F3021F7C4FB0095A0A8 /* fUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +68,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207DAF8D21FA521900BC0EF1 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				207DAF9221FA527100BC0EF1 /* CustomXIBUIView.swift */,
+				207DAF9021FA526700BC0EF1 /* NewRequestView.swift */,
+				207DAF8E21FA524F00BC0EF1 /* NewRequestView.xib */,
+				207DAF9421FA53D500BC0EF1 /* UserInfoView.swift */,
+				207DAF9621FA541F00BC0EF1 /* UserInfoView.xib */,
+				2020E41D21F9AC16003401FB /* RequestsTableVC.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		4137D2E80383511C37C93964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +126,12 @@
 		C920C69821F89A2200E553ED /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2020E41D21F9AC16003401FB /* RequestsTableVC.swift */,
+				207DAF8D21FA521900BC0EF1 /* Tabs */,
 				5E6AF9D921FA2A3D00A3B5DC /* RequestsTableCell */,
 				C9DA1F3521F7C4FB0095A0A8 /* LoginViewController.swift */,
 				C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */,
-				C9DA1F3721F7C4FB0095A0A8 /* Main.storyboard */,
 				5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */,
+				C9DA1F3721F7C4FB0095A0A8 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,14 +153,6 @@
 				C920C68B21F8663600E553ED /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		C920C6AA21F8CDF700E553ED /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				C920C6AB21F8CE0100E553ED /* Constants.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		C96EA65A21F8DB4F000517A3 /* Extensions */ = {
@@ -175,7 +188,6 @@
 				C920C69821F89A2200E553ED /* View */,
 				5E6AF9DA21FA2C1400A3B5DC /* Controller */,
 				C96EA65A21F8DB4F000517A3 /* Extensions */,
-				C920C6AA21F8CDF700E553ED /* Utils */,
 				C920C69921F89A3000E553ED /* Supporting Files */,
 				C920C69A21F89A3900E553ED /* Resources */,
 			);
@@ -243,8 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */,
+				207DAF8F21FA524F00BC0EF1 /* NewRequestView.xib in Resources */,
 				C9DA1F3E21F7C4FC0095A0A8 /* LaunchScreen.storyboard in Resources */,
 				C920C6AE21F8D14B00E553ED /* GoogleService-Info.plist in Resources */,
+				207DAF9721FA541F00BC0EF1 /* UserInfoView.xib in Resources */,
 				C920C68C21F8663600E553ED /* Assets.xcassets in Resources */,
 				C9DA1F3921F7C4FB0095A0A8 /* Main.storyboard in Resources */,
 			);
@@ -311,12 +325,14 @@
 				C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */,
 				2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */,
 				C9DA1F3621F7C4FB0095A0A8 /* LoginViewController.swift in Sources */,
+				207DAF9321FA527100BC0EF1 /* CustomXIBUIView.swift in Sources */,
 				C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */,
 				5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */,
-				C920C6AC21F8CE0100E553ED /* Constants.swift in Sources */,
 				2020E41F21F9AC16003401FB /* RequestsTableCell.swift in Sources */,
 				2020E42021F9AC16003401FB /* Request.swift in Sources */,
 				C96EA65E21F8DBCC000517A3 /* LoginSecondViewController.swift in Sources */,
+				207DAF9521FA53D500BC0EF1 /* UserInfoView.swift in Sources */,
+				207DAF9121FA526700BC0EF1 /* NewRequestView.swift in Sources */,
 				2020E42321F9AC16003401FB /* RequestsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UUTHLQKMB9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/fUber/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,7 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UUTHLQKMB9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/fUber/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

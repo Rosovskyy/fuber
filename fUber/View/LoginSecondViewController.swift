@@ -49,7 +49,7 @@ class LoginSecondViewController: UIViewController {
                     return
                 }
                 
-                let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+                let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! UITabBarController
                 
                 DispatchQueue.main.async {
                     self.present(mainTabController, animated: true, completion: nil)

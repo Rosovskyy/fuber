@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="47O-fN-VoD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O16-55-QOl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,29 +10,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Request View Controller-->
+        <!--View Controller-->
         <scene sceneID="cGS-KI-68v">
             <objects>
-                <viewController storyboardIdentifier="NewRequestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARA-e5-Ptv" customClass="NewRequestViewController" customModule="fUber" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S5i-Dc-fRU">
+                <viewController storyboardIdentifier="NewRequestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARA-e5-Ptv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S5i-Dc-fRU" customClass="NewRequestView" customModule="fUber" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMe-dv-PIE">
-                                <rect key="frame" x="139" y="249" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LuU-Kn-0M0">
-                                <rect key="frame" x="139" y="311" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZEn-Xp-EHu"/>
                     </view>
@@ -86,17 +70,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9P-aS-fsQ">
-                                <rect key="frame" x="146.5" y="315.5" width="82" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mim-Q5-hpL" customClass="UserInfoView" customModule="fUber" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="E9P-aS-fsQ" firstAttribute="centerX" secondItem="SQM-Vz-DEq" secondAttribute="centerX" id="B6z-QY-wxA"/>
-                            <constraint firstItem="E9P-aS-fsQ" firstAttribute="centerY" secondItem="SQM-Vz-DEq" secondAttribute="centerY" id="Qbr-Uw-J8C"/>
+                            <constraint firstItem="mim-Q5-hpL" firstAttribute="top" secondItem="yRc-wT-9kt" secondAttribute="top" id="25T-qB-sZk"/>
+                            <constraint firstItem="mim-Q5-hpL" firstAttribute="leading" secondItem="yRc-wT-9kt" secondAttribute="leading" id="FuP-DY-ldH"/>
+                            <constraint firstItem="yRc-wT-9kt" firstAttribute="bottom" secondItem="mim-Q5-hpL" secondAttribute="bottom" id="SIk-Zu-556"/>
+                            <constraint firstItem="yRc-wT-9kt" firstAttribute="trailing" secondItem="mim-Q5-hpL" secondAttribute="trailing" id="xal-xr-Rnh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yRc-wT-9kt"/>
                     </view>
@@ -214,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="-2330.4000000000001" y="-36.431784107946029"/>
         </scene>
-        <!--Main Tab Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="N2z-qv-YYj">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O16-55-QOl" customClass="MainTabController" customModule="fUber" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O16-55-QOl" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JC8-z8-YqQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -342,5 +326,8 @@
     <resources>
         <image name="logo" width="1600" height="549"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="t4o-Zh-lQV"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
