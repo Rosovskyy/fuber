@@ -3,109 +3,109 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "icon_foober1.png",
+      "filename" : "logoIcon40-2.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "icon_foober2.png",
+      "filename" : "logoIcon60-3.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon_foober3.png",
+      "filename" : "logoIcon60-2.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon_foober4.png",
+      "filename" : "logoIcon76-2.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon_foober5.png",
+      "filename" : "logoIcon76-4.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon_foober6.png",
+      "filename" : "logoIcon76-3.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_foober7.png",
+      "filename" : "logoIcon76-5.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_foober8.png",
+      "filename" : "logoIcon76-1.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "icon_foober9.png",
+      "filename" : "logoIcon20.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "icon_foober10.png",
+      "filename" : "logoIcon40-1.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "icon_foober11.png",
+      "filename" : "logoIcon29.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "icon_foober12.png",
+      "filename" : "logoIcon60.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "icon_foober13.png",
+      "filename" : "logoIcon40.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "icon_foober14.png",
+      "filename" : "logoIcon76-6.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon_foober15.png",
+      "filename" : "logoIcon76.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon_foober16.png",
+      "filename" : "logoIcon76-7.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "icon_foober17.png",
+      "filename" : "logoIcon76-8.png",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "icon_foober18.png",
+      "filename" : "logoIcon.png",
       "scale" : "1x"
     }
   ],

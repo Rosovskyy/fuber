@@ -14,6 +14,7 @@ class Request {
     var validTime: Date;
     var locationFrom: String;
     var locationTo: String;
+    var finished: Bool = false;
     
     init(userid: String, time: Date, validTime: Date, locationFrom: String, locationTo: String) {
         self.userid = userid
