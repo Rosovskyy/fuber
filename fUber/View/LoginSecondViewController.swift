@@ -61,7 +61,7 @@ class LoginSecondViewController: UIViewController {
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {
-        performSegue(withIdentifier: "createAccountDummy", sender: nil)
+        performSegue(withIdentifier: "signUpSegue", sender: nil)
     }
     
 }
