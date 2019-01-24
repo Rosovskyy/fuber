@@ -18,11 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fuber" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-Q9-yf0">
-                                <rect key="frame" x="56.5" y="282.5" width="262" height="102"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-Q9-yf0">
+                                <rect key="frame" x="37.5" y="282" width="300" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="MZo-Zh-bU8"/>
+                                    <constraint firstAttribute="width" secondItem="hKd-Q9-yf0" secondAttribute="height" multiplier="1600:549" id="rfq-pI-INb"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hKd-Q9-yf0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="77B-eh-waD"/>
                             <constraint firstItem="hKd-Q9-yf0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="FbQ-8C-yn1"/>
@@ -36,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fuber" width="262" height="102"/>
+        <image name="logo" width="1600" height="549"/>
     </resources>
 </document>

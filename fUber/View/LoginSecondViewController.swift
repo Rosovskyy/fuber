@@ -13,12 +13,18 @@ class LoginSecondViewController: UIViewController {
 
     // MARK: IBOutlets
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loginButton.layer.masksToBounds = true
+        registerButton.layer.masksToBounds = true
+        loginButton.layer.cornerRadius = 20
+        registerButton.layer.cornerRadius = 20
     }
     
     // MARK: Actions
