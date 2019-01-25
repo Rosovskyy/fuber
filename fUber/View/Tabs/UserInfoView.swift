@@ -18,12 +18,5 @@ class UserInfoView: CustomXIBUIView {
         
         imageProfile.layer.cornerRadius = imageProfile.frame.size.width / 2
         imageProfile.clipsToBounds = true
-    }
-    
-
-    @IBAction func signOut(_ sender: Any) {
-        try? Auth.auth().signOut()
-        
-        performSegue(withIdentifier: "profileSignOutDummy", sender: nil)
-    }
+    }    
 }

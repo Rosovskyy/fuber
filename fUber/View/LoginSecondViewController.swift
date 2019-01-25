@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class LoginSecondViewController: UIViewController {
     let loginStackDispatchQueue = DispatchQueue(label: "Login", qos: .userInitiated)
-
+    
     // MARK: IBOutlets
     
     @IBOutlet weak var loginButton: UIButton!
@@ -43,13 +43,13 @@ class LoginSecondViewController: UIViewController {
         }
         
         let createUser = DispatchWorkItem {
-            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if let firebaseError = error {
                     print(firebaseError.localizedDescription)
                     return
                 }
                 
-                let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! UITabBarController
+                let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
                 
                 DispatchQueue.main.async {
                     self.present(mainTabController, animated: true, completion: nil)
@@ -74,7 +74,6 @@ extension LoginSecondViewController: UITextFieldDelegate {
         else if (textField == passwordTextField) {
             onData()
         }
-        
         
         textField.resignFirstResponder()
         
