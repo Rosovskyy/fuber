@@ -21,6 +21,7 @@
 		5EEB25F821FB03DE00819F7C /* NewRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB25F421FB03DD00819F7C /* NewRequestView.xib */; };
 		5EEB25FB21FB0B4100819F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB25FA21FB0B4100819F7C /* Main.storyboard */; };
 		5EEB261B21FB28C600819F7C /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEB261A21FB28C600819F7C /* MainTabController.swift */; };
+		5EEB261D21FC805300819F7C /* SendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEB261C21FC805300819F7C /* SendRequestViewController.swift */; };
 		C920C68C21F8663600E553ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C920C68B21F8663600E553ED /* Assets.xcassets */; };
 		C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C920C6A821F8A4B200E553ED /* UITextField+Extension.swift */; };
 		C920C6AE21F8D14B00E553ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C920C6AD21F8D14B00E553ED /* GoogleService-Info.plist */; };
@@ -46,6 +47,7 @@
 		5EEB25F421FB03DD00819F7C /* NewRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewRequestView.xib; path = fUber/View/NewRequestView.xib; sourceTree = SOURCE_ROOT; };
 		5EEB25FA21FB0B4100819F7C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5EEB261A21FB28C600819F7C /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		5EEB261C21FC805300819F7C /* SendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendRequestViewController.swift; sourceTree = "<group>"; };
 		61C6A33E2DA38F659F47341B /* Pods-fUber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fUber.release.xcconfig"; path = "Pods/Target Support Files/Pods-fUber/Pods-fUber.release.xcconfig"; sourceTree = "<group>"; };
 		6E879D7C2849307AB7E0933B /* Pods_fUber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fUber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C920C68B21F8663600E553ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		207DAF8D21FA521900BC0EF1 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				5EEB261C21FC805300819F7C /* SendRequestViewController.swift */,
 				5EEB261A21FB28C600819F7C /* MainTabController.swift */,
 				5EEB25EE21FB03BB00819F7C /* UserInfoView.swift */,
 				5EEB25EF21FB03BB00819F7C /* UserInfoView.xib */,
@@ -329,6 +332,7 @@
 			files = (
 				C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */,
 				2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */,
+				5EEB261D21FC805300819F7C /* SendRequestViewController.swift in Sources */,
 				C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */,
 				5EEB25F721FB03DE00819F7C /* CustomXIBUIView.swift in Sources */,
 				5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */,
