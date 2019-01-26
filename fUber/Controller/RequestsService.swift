@@ -17,7 +17,8 @@ class RequestsService {
     
     private init() {
         let reques = Request(userid: "hello123", time: Date(), validTime: Date().addingTimeInterval(TimeInterval(10000)), locationFrom: "Home", locationTo: "Wallmart")
-        getRequests()
+    
+        getRequestsDefaultQueue()
         for _ in 1...100 {
             requests.append(reques)
         }
@@ -36,9 +37,13 @@ class RequestsService {
                     let message = error.localizedDescription
                     let details = error.userInfo[FunctionsErrorDetailsKey]
                 }
-                
+
                 print(error.localizedDescription)
                 return
+            }
+            
+            if let success = (result?.data as? [String: Any])?["success"] as? Bool {
+                print("Add Request success:", success)
             }
         }
         // [END function_add_message]
@@ -55,19 +60,44 @@ class RequestsService {
                     let details = error.userInfo[FunctionsErrorDetailsKey]
                 }
                 
-                print(error.localizedDescription)
+                print("Error", error.localizedDescription)
                 return
             }
             
-            if let result1 = (result?.data as? [String: Any])?["result"] as? String {
-                print(result1)
+            if let success = (result?.data as? [String: Any])?["success"] as? Bool {
+                print("Get Requests success:", success)
             }
-            print(result)
-            print(result?.data ?? "nil")
-            print("end")
+            
+            
+            if let requests = (result?.data as? [String: Any])?["requests"] as? [Any] {
+                self.requests = []
+                for request in requests {
+                    guard let requestDict = request as? [String: Any] else {
+                        continue
+                    }
+                    
+                    let uid = (requestDict["user"] as? [String: Any])?["uid"] as! String
+                    let time = Request.getDate(string: requestDict["time"] as! String
+)
+                    let validTime = Request.getDate(string: requestDict["validTime"] as! String)
+                    let locationFrom = requestDict["locationFrom"] as! String
+                    let locationTo = requestDict["locationTo"] as! String
+                    
+                    let newRequest = Request(userid: uid, time: time, validTime: validTime, locationFrom: locationFrom, locationTo: locationTo)
+                    self.requests.append(newRequest)
+                }
+                
+                NotificationCenter.default.post(name: Notification.Name("foober.reloadRequests"), object: nil)
+            }
         }
     }
     
+    func getRequestsDefaultQueue(deadline: DispatchTime = .now()) {
+        DispatchQueue(label: "Get requests", qos: .default).asyncAfter(deadline: deadline) {
+            self.getRequests()
+        }
+    }
+
     static var instance: RequestsService {
         return classInstance
     }

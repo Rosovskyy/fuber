@@ -42,22 +42,19 @@ class LoginSecondViewController: UIViewController {
             return
         }
         
-        let createUser = DispatchWorkItem {
-            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                if let firebaseError = error {
-                    print(firebaseError.localizedDescription)
+    
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+            if let firebaseError = error {
+                print(firebaseError.localizedDescription)
                     return
-                }
+            }
                 
-                let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+            let mainTabController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! UITabBarController
                 
-                DispatchQueue.main.async {
-                    self.present(mainTabController, animated: true, completion: nil)
-                }
-            })
-        }
-        
-        loginStackDispatchQueue.async(execute: createUser)
+            DispatchQueue.main.async {
+                self.present(mainTabController, animated: true, completion: nil)
+            }
+        });
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {

@@ -28,9 +28,15 @@ class RequestsTableVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: Notification.Name("foober.reloadRequests"), object: nil)
+        
         let nib = UINib(nibName: "RequestsTableCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "RequestsTableCell")
         
+    }
+    
+    @objc func reloadTableView(_ notification: Notification) {
+        tableView.reloadData()
     }
     
 }

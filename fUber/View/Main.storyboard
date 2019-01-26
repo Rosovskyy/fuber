@@ -340,10 +340,10 @@
             </objects>
             <point key="canvasLocation" x="-2330.4000000000001" y="-36.431784107946029"/>
         </scene>
-        <!--Main Tab Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="N2z-qv-YYj">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O16-55-QOl" customClass="MainTabController" customModule="fUber" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O16-55-QOl" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JC8-z8-YqQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
