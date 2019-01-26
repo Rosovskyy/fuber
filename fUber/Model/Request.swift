@@ -14,6 +14,7 @@ class Request {
     var validTime: Date;
     var locationFrom: String;
     var locationTo: String;
+    var finished: Bool = false;
     
     init(userid: String, time: Date, validTime: Date, locationFrom: String, locationTo: String) {
         self.userid = userid
@@ -42,5 +43,15 @@ class Request {
             self.lat = lat
             self.lon = lon
         }
+    }
+    
+    func toDict() -> [String: String] {
+        return [
+            "userid": userid,
+            "time": Request.formatDate(time),
+            "validTime": Request.formatDate(validTime),
+            "locationFrom": locationFrom,
+            "locationTo": locationTo
+        ]
     }
 }
