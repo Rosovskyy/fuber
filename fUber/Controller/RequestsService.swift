@@ -14,11 +14,9 @@ class RequestsService {
     
     private init() {
         let reques = Request(userid: "hello123", time: Date(), validTime: Date().addingTimeInterval(TimeInterval(10000)), locationFrom: "Home", locationTo: "Wallmart")
-        for _ in 1...100 {
-            requests.append(reques)
-        }
+        requests.append(reques)
     }
-
+    
     static var instance: RequestsService {
         return classInstance
     }
