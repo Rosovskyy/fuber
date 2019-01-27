@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="47O-fN-VoD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O16-55-QOl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dt3-oy-yyD">
-                                <rect key="frame" x="81" y="210" width="213.5" height="210"/>
+                                <rect key="frame" x="81" y="90" width="213.5" height="210"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From (string)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUv-xI-gFb" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
                                         <rect key="frame" x="54" y="0.0" width="105.5" height="30"/>
@@ -65,21 +65,51 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="vqi-85-WTP">
+                                <rect key="frame" x="0.0" y="360" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="570300447.48482096">
+                                    <!--2019-01-27 16:47:27 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateChanged:" destination="ARA-e5-Ptv" eventType="valueChanged" id="7Ov-CB-qSM"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-3a-ecn" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                <rect key="frame" x="169" y="584" width="37" height="30"/>
+                                <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done:" destination="ARA-e5-Ptv" eventType="touchUpInside" id="Vxm-O3-VQl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Km1-iz-kMf" firstAttribute="top" secondItem="ZEn-Xp-EHu" secondAttribute="top" id="6JY-gJ-0Yg"/>
+                            <constraint firstItem="vqi-85-WTP" firstAttribute="leading" secondItem="ZEn-Xp-EHu" secondAttribute="leading" id="7WP-9T-Pqh"/>
                             <constraint firstItem="ZEn-Xp-EHu" firstAttribute="trailing" secondItem="Km1-iz-kMf" secondAttribute="trailing" id="Ecw-dK-3F4"/>
+                            <constraint firstItem="ZEn-Xp-EHu" firstAttribute="bottom" secondItem="hmL-3a-ecn" secondAttribute="bottom" constant="4" id="EkS-d6-WAO"/>
+                            <constraint firstItem="ZEn-Xp-EHu" firstAttribute="trailing" secondItem="vqi-85-WTP" secondAttribute="trailing" id="HtV-cC-tcM"/>
+                            <constraint firstItem="hmL-3a-ecn" firstAttribute="top" secondItem="vqi-85-WTP" secondAttribute="bottom" constant="8" id="JYh-eA-xQ5"/>
                             <constraint firstItem="Dt3-oy-yyD" firstAttribute="centerX" secondItem="S5i-Dc-fRU" secondAttribute="centerX" id="TUf-KG-RwC"/>
                             <constraint firstItem="Km1-iz-kMf" firstAttribute="leading" secondItem="ZEn-Xp-EHu" secondAttribute="leading" id="his-RE-JAS"/>
-                            <constraint firstItem="Dt3-oy-yyD" firstAttribute="top" secondItem="Km1-iz-kMf" secondAttribute="bottom" constant="130" id="rjt-vk-2AO"/>
+                            <constraint firstItem="hmL-3a-ecn" firstAttribute="centerX" secondItem="S5i-Dc-fRU" secondAttribute="centerX" id="kec-Wp-vFF"/>
+                            <constraint firstItem="Dt3-oy-yyD" firstAttribute="top" secondItem="Km1-iz-kMf" secondAttribute="bottom" constant="10" id="rjt-vk-2AO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZEn-Xp-EHu"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vqi-85-WTP"/>
+                                <exclude reference="hmL-3a-ecn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="bUj-KD-bJ8"/>
                     <connections>
                         <outlet property="addressFromField" destination="zUv-xI-gFb" id="dCf-Sk-AUo"/>
                         <outlet property="addressToField" destination="xJJ-ae-nik" id="0KB-CA-h6I"/>
+                        <outlet property="datePicker" destination="vqi-85-WTP" id="8w4-MZ-o5T"/>
+                        <outlet property="doneButton" destination="hmL-3a-ecn" id="jxn-g8-7yN"/>
                         <outlet property="timeField" destination="4un-TO-TQA" id="jQb-Hh-7ns"/>
                         <outlet property="validTimeField" destination="u48-fk-cIZ" id="o7H-9D-wKK"/>
                     </connections>
