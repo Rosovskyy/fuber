@@ -15,6 +15,7 @@
 		207DAF9B21FA646500BC0EF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */; };
 		2084BD5D21FDF89A00AE37BA /* UIRoundedColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2084BD5C21FDF89A00AE37BA /* UIRoundedColoredButton.swift */; };
 		2084BD5F21FE015100AE37BA /* UIResizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2084BD5E21FE015100AE37BA /* UIResizedTextField.swift */; };
+		2084BD6321FE3A1A00AE37BA /* UIStateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2084BD6221FE3A1A00AE37BA /* UIStateLabel.swift */; };
 		20EB00B521FCF6DA005607DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20EB00B421FCF6DA005607DB /* LaunchScreen.storyboard */; };
 		5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */; };
 		5EEB25FB21FB0B4100819F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB25FA21FB0B4100819F7C /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2084BD5C21FDF89A00AE37BA /* UIRoundedColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedColoredButton.swift; sourceTree = "<group>"; };
 		2084BD5E21FE015100AE37BA /* UIResizedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResizedTextField.swift; sourceTree = "<group>"; };
+		2084BD6221FE3A1A00AE37BA /* UIStateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStateLabel.swift; sourceTree = "<group>"; };
 		20EB00B421FCF6DA005607DB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		381B4795435860142CCD1792 /* Pods-fUber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fUber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fUber/Pods-fUber.debug.xcconfig"; sourceTree = "<group>"; };
 		5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				2084BD5C21FDF89A00AE37BA /* UIRoundedColoredButton.swift */,
 				2084BD5E21FE015100AE37BA /* UIResizedTextField.swift */,
+				2084BD6221FE3A1A00AE37BA /* UIStateLabel.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */,
+				2084BD6321FE3A1A00AE37BA /* UIStateLabel.swift in Sources */,
 				2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */,
 				5EEB261D21FC805300819F7C /* SendRequestViewController.swift in Sources */,
 				C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */,

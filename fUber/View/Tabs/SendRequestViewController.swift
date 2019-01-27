@@ -76,6 +76,10 @@ extension SendRequestViewController: UITextFieldDelegate {
         self.view.addSubview(doneButton)
         self.view.addSubview(datePicker)
         
+        if let date = Request.getDate(string: textField.text!) {
+            datePicker.date = date
+        }
+        
         self.view.addConstraints([
             NSLayoutConstraint(item: doneButton, attribute:  .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1, constant: -4),
             NSLayoutConstraint(item: doneButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0),
