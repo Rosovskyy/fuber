@@ -16,8 +16,6 @@ class RegistrationViewController: UIViewController {
     let ref = Database.database().reference()
 
     // MARK: IBOutlets
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var numberTextField: UITextField!
@@ -26,12 +24,6 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        signUpButton.layer.masksToBounds = true
-        signUpButton.layer.cornerRadius = 20
-        returnButton.layer.masksToBounds = true
-        returnButton.layer.cornerRadius = 20
-
     }
     
     // MARK: Actions

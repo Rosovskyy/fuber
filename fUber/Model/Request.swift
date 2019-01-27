@@ -9,14 +9,14 @@
 import Foundation
 
 class Request {
-    var userid: String;
+    var userid: String?;
     var time: Date;
     var validTime: Date;
     var locationFrom: String;
     var locationTo: String;
     var finished: Bool = false;
     
-    init(userid: String, time: Date, validTime: Date, locationFrom: String, locationTo: String) {
+    init(userid: String?, time: Date, validTime: Date, locationFrom: String, locationTo: String) {
         self.userid = userid
         self.time = time
         self.validTime = validTime
@@ -30,9 +30,9 @@ class Request {
         return dateFormatter.string(from: date)
     }
     
-    static func getDate(string: String) -> Date {
+    static func getDate(string: String) -> Date?  {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return dateFormatter.date(from: string)!
+        return dateFormatter.date(from: string)
     }
     
     class Location {
@@ -47,7 +47,7 @@ class Request {
     
     func toDict() -> [String: String] {
         return [
-            "userid": userid,
+            "userid": userid ?? "nil",
             "time": Request.formatDate(time),
             "validTime": Request.formatDate(validTime),
             "locationFrom": locationFrom,

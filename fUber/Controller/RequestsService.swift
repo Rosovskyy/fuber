@@ -77,9 +77,9 @@ class RequestsService {
                     }
                     
                     let uid = (requestDict["user"] as? [String: Any])?["uid"] as! String
-                    let time = Request.getDate(string: requestDict["time"] as! String
-)
-                    let validTime = Request.getDate(string: requestDict["validTime"] as! String)
+                    
+                    let time = Request.getDate(string: requestDict["time"] as! String)!
+                    let validTime = Request.getDate(string: requestDict["validTime"] as! String)!
                     let locationFrom = requestDict["locationFrom"] as! String
                     let locationTo = requestDict["locationTo"] as! String
                     

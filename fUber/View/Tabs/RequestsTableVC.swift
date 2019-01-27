@@ -18,12 +18,6 @@ class RequestsTableVC: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -33,6 +27,10 @@ class RequestsTableVC: UIViewController {
         let nib = UINib(nibName: "RequestsTableCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "RequestsTableCell")
         
+    }
+    
+    @IBAction func reloadEverything(_ sender: Any) {
+        RequestsService.instance.getRequestsDefaultQueue()
     }
     
     @objc func reloadTableView(_ notification: Notification) {

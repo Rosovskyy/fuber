@@ -13,6 +13,8 @@
 		2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41D21F9AC16003401FB /* RequestsTableVC.swift */; };
 		2020E42321F9AC16003401FB /* RequestsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41E21F9AC16003401FB /* RequestsService.swift */; };
 		207DAF9B21FA646500BC0EF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */; };
+		2084BD5D21FDF89A00AE37BA /* UIRoundedColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2084BD5C21FDF89A00AE37BA /* UIRoundedColoredButton.swift */; };
+		2084BD5F21FE015100AE37BA /* UIResizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2084BD5E21FE015100AE37BA /* UIResizedTextField.swift */; };
 		20EB00B521FCF6DA005607DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20EB00B421FCF6DA005607DB /* LaunchScreen.storyboard */; };
 		5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */; };
 		5EEB25FB21FB0B4100819F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEB25FA21FB0B4100819F7C /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		2020E41D21F9AC16003401FB /* RequestsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsTableVC.swift; sourceTree = "<group>"; };
 		2020E41E21F9AC16003401FB /* RequestsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsService.swift; sourceTree = "<group>"; };
 		207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2084BD5C21FDF89A00AE37BA /* UIRoundedColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedColoredButton.swift; sourceTree = "<group>"; };
+		2084BD5E21FE015100AE37BA /* UIResizedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResizedTextField.swift; sourceTree = "<group>"; };
 		20EB00B421FCF6DA005607DB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		381B4795435860142CCD1792 /* Pods-fUber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fUber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fUber/Pods-fUber.debug.xcconfig"; sourceTree = "<group>"; };
 		5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 				207DAF9A21FA646500BC0EF1 /* ProfileViewController.swift */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		2084BD5B21FDF85600AE37BA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				2084BD5C21FDF89A00AE37BA /* UIRoundedColoredButton.swift */,
+				2084BD5E21FE015100AE37BA /* UIResizedTextField.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		4137D2E80383511C37C93964 /* Frameworks */ = {
@@ -115,6 +128,7 @@
 		C920C69821F89A2200E553ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2084BD5B21FDF85600AE37BA /* Style */,
 				207DAF8D21FA521900BC0EF1 /* Tabs */,
 				5E6AF9D921FA2A3D00A3B5DC /* RequestsTableCell */,
 				C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */,
@@ -318,7 +332,9 @@
 				2020E41F21F9AC16003401FB /* RequestsTableCell.swift in Sources */,
 				2020E42021F9AC16003401FB /* Request.swift in Sources */,
 				C96EA65E21F8DBCC000517A3 /* LoginSecondViewController.swift in Sources */,
+				2084BD5F21FE015100AE37BA /* UIResizedTextField.swift in Sources */,
 				207DAF9B21FA646500BC0EF1 /* ProfileViewController.swift in Sources */,
+				2084BD5D21FDF89A00AE37BA /* UIRoundedColoredButton.swift in Sources */,
 				2020E42321F9AC16003401FB /* RequestsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

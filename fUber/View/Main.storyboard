@@ -18,64 +18,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dt3-oy-yyD">
-                                <rect key="frame" x="37.5" y="190" width="300" height="165"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dt3-oy-yyD">
+                                <rect key="frame" x="81" y="210" width="213.5" height="210"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From (address)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUv-xI-gFb">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From (string)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUv-xI-gFb" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="54" y="0.0" width="105.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To (place)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJJ-ae-nik">
-                                        <rect key="frame" x="0.0" y="45" width="300" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To (string)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJJ-ae-nik" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="62.5" y="45" width="88" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Starting time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4un-TO-TQA">
-                                        <rect key="frame" x="0.0" y="90" width="300" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="time (yyyy-MM-dd hh:mm:ss)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4un-TO-TQA" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="213.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="valid time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u48-fk-cIZ" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="135" width="83" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valid till" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u48-fk-cIZ">
-                                        <rect key="frame" x="0.0" y="135" width="300" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCu-ZL-1Xv" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="60.5" y="180" width="92" height="30"/>
+                                        <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Send request"/>
+                                        <connections>
+                                            <action selector="sendRequest:" destination="ARA-e5-Ptv" eventType="touchUpInside" id="Tj1-aH-RhT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Lak-tx-j19"/>
-                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km1-iz-kMf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
-                                <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Create new request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km1-iz-kMf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.2638453543" green="0.62827003000000003" blue="0.45281016829999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="R9b-xi-8pX"/>
+                                    <constraint firstAttribute="height" constant="60" id="R9b-xi-8pX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCu-ZL-1Xv">
-                                <rect key="frame" x="117.5" y="400" width="140" height="50"/>
-                                <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="RQ5-gh-PzW"/>
-                                    <constraint firstAttribute="width" constant="140" id="oRI-B9-Hdg"/>
-                                </constraints>
-                                <state key="normal" title="Send request"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Km1-iz-kMf" firstAttribute="top" secondItem="ZEn-Xp-EHu" secondAttribute="top" id="6JY-gJ-0Yg"/>
                             <constraint firstItem="ZEn-Xp-EHu" firstAttribute="trailing" secondItem="Km1-iz-kMf" secondAttribute="trailing" id="Ecw-dK-3F4"/>
-                            <constraint firstItem="eCu-ZL-1Xv" firstAttribute="top" secondItem="Dt3-oy-yyD" secondAttribute="bottom" constant="45" id="Eed-zS-Xxn"/>
-                            <constraint firstItem="eCu-ZL-1Xv" firstAttribute="centerX" secondItem="S5i-Dc-fRU" secondAttribute="centerX" id="P3p-wL-s2M"/>
                             <constraint firstItem="Dt3-oy-yyD" firstAttribute="centerX" secondItem="S5i-Dc-fRU" secondAttribute="centerX" id="TUf-KG-RwC"/>
                             <constraint firstItem="Km1-iz-kMf" firstAttribute="leading" secondItem="ZEn-Xp-EHu" secondAttribute="leading" id="his-RE-JAS"/>
                             <constraint firstItem="Dt3-oy-yyD" firstAttribute="top" secondItem="Km1-iz-kMf" secondAttribute="bottom" constant="130" id="rjt-vk-2AO"/>
@@ -84,7 +78,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="bUj-KD-bJ8"/>
                     <connections>
-                        <outlet property="sendRequestButton" destination="eCu-ZL-1Xv" id="NGD-Ik-h0O"/>
+                        <outlet property="addressFromField" destination="zUv-xI-gFb" id="dCf-Sk-AUo"/>
+                        <outlet property="addressToField" destination="xJJ-ae-nik" id="0KB-CA-h6I"/>
+                        <outlet property="timeField" destination="4un-TO-TQA" id="jQb-Hh-7ns"/>
+                        <outlet property="validTimeField" destination="u48-fk-cIZ" id="o7H-9D-wKK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdU-3x-Rmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,36 +96,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Jm-v0-b1E">
-                                <rect key="frame" x="0.0" y="84" width="375" height="534"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" semanticContentAttribute="spatial" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0D-9E-LCr">
+                                <rect key="frame" x="0.0" y="20" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2rx-dG-m72"/>
+                                    <constraint firstAttribute="height" constant="60" id="NUB-7I-aGC"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="afg-qY-BUI">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="reloadEverything:" destination="SpO-AK-v7U" id="Ywy-mL-wJ6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.2638453543" green="0.62827003000000003" blue="0.45281016829999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Jm-v0-b1E" customClass="R">
+                                <rect key="frame" x="0.0" y="80" width="375" height="538"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCH-Kl-wHQ">
-                                <rect key="frame" x="30" y="40" width="113" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oj7-fq-WXv">
+                                <rect key="frame" x="60" y="20" width="315" height="60"/>
+                                <color key="backgroundColor" red="0.2638453543" green="0.62827003000000003" blue="0.45281016829999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="stx-3Q-1kt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fCH-Kl-wHQ" firstAttribute="top" secondItem="fr1-eh-A53" secondAttribute="top" constant="20" id="M2c-zt-g4v"/>
+                            <constraint firstItem="2Jm-v0-b1E" firstAttribute="bottom" secondItem="fr1-eh-A53" secondAttribute="bottom" id="3K9-8g-XRd"/>
+                            <constraint firstItem="fr1-eh-A53" firstAttribute="trailing" secondItem="Oj7-fq-WXv" secondAttribute="trailing" id="3Qg-Kz-fMx"/>
+                            <constraint firstItem="2Jm-v0-b1E" firstAttribute="top" secondItem="h0D-9E-LCr" secondAttribute="bottom" id="J9l-v2-QRK"/>
                             <constraint firstItem="fr1-eh-A53" firstAttribute="bottom" secondItem="2Jm-v0-b1E" secondAttribute="bottom" id="PuO-5a-CbP"/>
-                            <constraint firstItem="fCH-Kl-wHQ" firstAttribute="leading" secondItem="fr1-eh-A53" secondAttribute="leading" constant="30" id="Qbm-LB-Jxe"/>
+                            <constraint firstItem="h0D-9E-LCr" firstAttribute="top" secondItem="fr1-eh-A53" secondAttribute="top" id="d2r-ys-LsX"/>
                             <constraint firstItem="2Jm-v0-b1E" firstAttribute="leading" secondItem="fr1-eh-A53" secondAttribute="leading" id="dzd-yz-hV2"/>
                             <constraint firstItem="2Jm-v0-b1E" firstAttribute="trailing" secondItem="fr1-eh-A53" secondAttribute="trailing" id="fbT-Ph-WgC"/>
-                            <constraint firstItem="2Jm-v0-b1E" firstAttribute="top" secondItem="fCH-Kl-wHQ" secondAttribute="bottom" constant="10" id="qd8-FN-L7D"/>
+                            <constraint firstItem="Oj7-fq-WXv" firstAttribute="top" secondItem="fr1-eh-A53" secondAttribute="top" id="vyA-xm-fqR"/>
+                            <constraint firstItem="h0D-9E-LCr" firstAttribute="leading" secondItem="fr1-eh-A53" secondAttribute="leading" id="wDf-jS-fVF"/>
+                            <constraint firstItem="Oj7-fq-WXv" firstAttribute="leading" secondItem="h0D-9E-LCr" secondAttribute="trailing" id="zk3-RX-zGg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fr1-eh-A53"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="lHg-5N-Qih"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="vNK-4Q-IGI"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="2Jm-v0-b1E" id="9YE-WQ-Qqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O05-2h-12L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="297"/>
+            <point key="canvasLocation" x="445.60000000000002" y="296.40179910044981"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="dfR-bg-9aW">
@@ -138,12 +162,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-TG-1ZO">
-                                <rect key="frame" x="176" y="116" width="140" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-TG-1ZO" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                <rect key="frame" x="176" y="118" width="180" height="36"/>
                                 <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="JXZ-ra-kql"/>
-                                    <constraint firstAttribute="height" constant="40" id="jqs-Cw-bOc"/>
+                                    <constraint firstAttribute="width" constant="180" id="JXZ-ra-kql"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Change avatar">
@@ -153,8 +176,8 @@
                                     <action selector="changeProfileImageTapped:" destination="DH1-FD-4Nw" eventType="touchUpInside" id="wWW-28-WbD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tK-8B-Nrj">
-                                <rect key="frame" x="269" y="35" width="90" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tK-8B-Nrj" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                <rect key="frame" x="269" y="37" width="90" height="36"/>
                                 <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Out"/>
@@ -242,37 +265,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="soz-zi-hPn">
-                                <rect key="frame" x="37.5" y="253.5" width="300" height="160"/>
+                                <rect key="frame" x="37.5" y="261.5" width="300" height="144"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-Sj-7Af">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-Sj-7Af" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="114.5" y="0.0" width="71.5" height="32"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="8bk-2r-bJf"/>
-                                            <constraint firstAttribute="width" constant="300" id="8dq-Xw-2oq"/>
-                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Xz-0O-TSb">
-                                        <rect key="frame" x="0.0" y="60" width="300" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Xz-0O-TSb" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="96.5" y="52" width="107" height="32"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="07R-vO-NgP"/>
-                                            <constraint firstAttribute="height" constant="40" id="N2Y-eF-dO3"/>
-                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5r-zZ-rVT">
-                                        <rect key="frame" x="80" y="120" width="140" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5r-zZ-rVT" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="121.5" y="104" width="57" height="40"/>
                                         <color key="backgroundColor" red="0.13581344485282898" green="0.56911015510559082" blue="0.35971653461456299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="GsX-64-JEV"/>
-                                            <constraint firstAttribute="height" constant="40" id="dWu-kL-XL9"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -287,19 +298,15 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xOl-uW-TKR">
-                                <rect key="frame" x="37.5" y="80.5" width="300" height="103"/>
+                                <rect key="frame" x="37.5" y="88.5" width="300" height="103"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xOl-uW-TKR" secondAttribute="height" multiplier="1600:549" id="6uI-Sp-zea"/>
                                     <constraint firstAttribute="width" constant="300" id="edl-XG-oi9"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18I-qY-iMl">
-                                <rect key="frame" x="117.5" y="557" width="140" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18I-qY-iMl" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                <rect key="frame" x="151" y="557" width="73" height="40"/>
                                 <color key="backgroundColor" red="0.1358134449" green="0.56911015509999996" blue="0.35971653460000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="Eg4-c9-53X"/>
-                                    <constraint firstAttribute="height" constant="40" id="io2-wo-7Xh"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -331,9 +338,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="1qz-Sj-7Af" id="hxG-yc-5nh"/>
-                        <outlet property="loginButton" destination="Q5r-zZ-rVT" id="IGx-Vq-ZEJ"/>
                         <outlet property="passwordTextField" destination="3Xz-0O-TSb" id="JzT-ly-s5r"/>
-                        <outlet property="registerButton" destination="18I-qY-iMl" id="bN5-3M-blm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JnH-so-WOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,12 +352,12 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JC8-z8-YqQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -375,55 +380,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AOD-JC-b7M">
-                                <rect key="frame" x="32.5" y="193.5" width="310" height="280"/>
+                                <rect key="frame" x="122.5" y="213.5" width="130" height="240"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBi-2y-AhE">
-                                        <rect key="frame" x="15" y="0.0" width="280" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="2Yw-G0-9Bg"/>
-                                            <constraint firstAttribute="width" constant="280" id="L4U-Zg-K6P"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBi-2y-AhE" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="34.5" y="0.0" width="61.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-0q-tho">
-                                        <rect key="frame" x="15" y="60" width="280" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="cMP-ad-b09"/>
-                                            <constraint firstAttribute="height" constant="40" id="mbv-Vu-sdF"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-0q-tho" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="15.5" y="50" width="99.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-Hb-oWi">
-                                        <rect key="frame" x="15" y="120" width="280" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Dtl-T6-qxG"/>
-                                            <constraint firstAttribute="width" constant="280" id="Wxd-0h-VAS"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-Hb-oWi" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="130" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-91-ztV">
-                                        <rect key="frame" x="15" y="180" width="280" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="ARZ-Tk-mpg"/>
-                                            <constraint firstAttribute="height" constant="40" id="ikX-cq-8CC"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-91-ztV" customClass="UIResizedTextField" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="20.5" y="150" width="89.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XME-OX-gXA">
-                                        <rect key="frame" x="85" y="240" width="140" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XME-OX-gXA" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                        <rect key="frame" x="28.5" y="200" width="73" height="40"/>
                                         <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="i15-DG-dr6"/>
-                                            <constraint firstAttribute="width" constant="140" id="sgk-03-Eu9"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
@@ -431,17 +416,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="310" id="AKc-hQ-Xuj"/>
-                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxh-dE-dna">
-                                <rect key="frame" x="117.5" y="563.5" width="140" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxh-dE-dna" customClass="UIRoundedColoredButton" customModule="fUber" customModuleProvider="target">
+                                <rect key="frame" x="158.5" y="543.5" width="58" height="36"/>
                                 <color key="backgroundColor" red="0.13924542070000001" green="0.56885749100000005" blue="0.3596775532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3Ju-Ev-Hgn"/>
-                                    <constraint firstAttribute="width" constant="140" id="Kl6-n4-sjI"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Return"/>
                                 <connections>
@@ -452,10 +430,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dxh-dE-dna" firstAttribute="top" secondItem="AOD-JC-b7M" secondAttribute="bottom" constant="90" id="Dls-zu-S9v"/>
                             <constraint firstItem="dxh-dE-dna" firstAttribute="centerX" secondItem="oOV-bX-5m2" secondAttribute="centerX" id="ecK-h7-FVb"/>
                             <constraint firstItem="AOD-JC-b7M" firstAttribute="centerX" secondItem="oOV-bX-5m2" secondAttribute="centerX" id="teH-2S-ksq"/>
                             <constraint firstItem="AOD-JC-b7M" firstAttribute="centerY" secondItem="oOV-bX-5m2" secondAttribute="centerY" id="vbQ-qH-jsE"/>
+                            <constraint firstItem="dxh-dE-dna" firstAttribute="top" secondItem="AOD-JC-b7M" secondAttribute="bottom" constant="90" id="x0a-od-8c7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FkQ-bm-X1p"/>
                     </view>
@@ -464,8 +442,6 @@
                         <outlet property="nameTextField" destination="YWb-0q-tho" id="IaI-0j-vOy"/>
                         <outlet property="numberTextField" destination="7eh-Hb-oWi" id="vpw-YC-6HP"/>
                         <outlet property="passwordTextField" destination="S1K-91-ztV" id="jo4-ve-uCY"/>
-                        <outlet property="returnButton" destination="dxh-dE-dna" id="nHu-GJ-czW"/>
-                        <outlet property="signUpButton" destination="XME-OX-gXA" id="pSD-kG-rma"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpd-6m-5AU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -478,7 +454,7 @@
         <image name="logo" width="1600" height="549"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mV5-Yf-sDB"/>
+        <segue reference="QyR-Jo-kFt"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
