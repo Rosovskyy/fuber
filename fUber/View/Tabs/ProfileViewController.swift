@@ -31,6 +31,29 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         signOutButton.clipsToBounds = true
         changeImageButton.layer.cornerRadius = 20
         changeImageButton.clipsToBounds = true
+        
+        setDataAboutUser()
+    }
+    
+    func setDataAboutUser() {
+        if Auth.auth().currentUser != nil {
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            
+            Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot)
+                in
+                guard let dict = snapshot.value as? [String: Any] else {
+                    return
+                }
+                
+                let user = CurrentUser(uid: uid, dictionary: dict)
+                self.nameLabel.text = "Name: " + user.name
+                self.emailLabel.text = "Email: " + user.email
+                self.phoneLabel.text = "Phone number: " + user.number
+                
+            }) { (err) in
+                print(err)
+            }
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
