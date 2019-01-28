@@ -46,7 +46,10 @@ class RegistrationViewController: UIViewController {
 
             
             let ref = Database.database().reference()
-            let usersReference = ref.child("users").childByAutoId()
+            guard let uid = Auth.auth().currentUser?.uid else {
+                return
+            }
+            let usersReference = ref.child("users").child(uid)
             let values = ["email": email, "name": name, "number": number, "password": password]
             usersReference.setValue(values)
             
