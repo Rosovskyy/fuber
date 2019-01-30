@@ -48,6 +48,17 @@ extension RequestsTableVC: UITableViewDataSource {
         return 90;
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCellDummy", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CellViewController {
+            destination.request = requestsService.requests[(tableView.indexPathForSelectedRow?.row)!]
+            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return requestsService.requests.count
     }
