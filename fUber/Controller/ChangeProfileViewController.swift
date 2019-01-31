@@ -7,24 +7,37 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class ChangeProfileViewController: UIViewController {
-
+    
+    // MARK: Properties
+    var data: String = ""
+    
+    // MARK: IBOutlets
+    @IBOutlet weak var justALabel: UILabel!
+    @IBOutlet weak var changeButton: UIButton!
+    @IBOutlet weak var changeTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        justALabel.text = data.capitalizingFirstLetter()
+        changeButton.setTitle("Change your \(data)", for: .normal)
+        changeTextField.underlined()
+    }
+    
+    @IBAction func changeTapped(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            
+            Database.database().reference().child("users").child(uid).child(data).setValue(changeTextField.text)
+            
+                performSegue(withIdentifier: "ChangeToProfileDummy", sender: nil)
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
