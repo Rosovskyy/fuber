@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.tableFooterView = UIView()
         tableView.register(nibName: "UserTableCell")
         
         setDataAboutUser()
