@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201A91E522032E290002BD4C /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A91E422032E290002BD4C /* CurrentUser.swift */; };
+		201A91E722032F8D0002BD4C /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A91E622032F8D0002BD4C /* CellViewController.swift */; };
+		201A91F0220335620002BD4C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A91EF220335620002BD4C /* UITableView+Extension.swift */; };
+		201A921B220349120002BD4C /* UserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A9219220349120002BD4C /* UserTableCell.swift */; };
+		201A921C220349120002BD4C /* UserTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201A921A220349120002BD4C /* UserTableCell.xib */; };
 		2020E41F21F9AC16003401FB /* RequestsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41A21F9AC15003401FB /* RequestsTableCell.swift */; };
 		2020E42021F9AC16003401FB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41B21F9AC15003401FB /* Request.swift */; };
 		2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2020E41C21F9AC16003401FB /* RequestsTableCell.xib */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		201A91E422032E290002BD4C /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		201A91E622032F8D0002BD4C /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		201A91EF220335620002BD4C /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		201A9219220349120002BD4C /* UserTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableCell.swift; sourceTree = "<group>"; };
+		201A921A220349120002BD4C /* UserTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableCell.xib; sourceTree = "<group>"; };
 		2020E41A21F9AC15003401FB /* RequestsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsTableCell.swift; sourceTree = "<group>"; };
 		2020E41B21F9AC15003401FB /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		2020E41C21F9AC16003401FB /* RequestsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestsTableCell.xib; sourceTree = "<group>"; };
@@ -97,23 +107,27 @@
 		5E6AF9D821FA2A1F00A3B5DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				201A91E422032E290002BD4C /* CurrentUser.swift */,
 				2020E41B21F9AC15003401FB /* Request.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5E6AF9D921FA2A3D00A3B5DC /* RequestsTableCell */ = {
+		5E6AF9D921FA2A3D00A3B5DC /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
 				2020E41A21F9AC15003401FB /* RequestsTableCell.swift */,
 				2020E41C21F9AC16003401FB /* RequestsTableCell.xib */,
+				201A9219220349120002BD4C /* UserTableCell.swift */,
+				201A921A220349120002BD4C /* UserTableCell.xib */,
 			);
-			path = RequestsTableCell;
+			path = TableCells;
 			sourceTree = "<group>";
 		};
 		5E6AF9DA21FA2C1400A3B5DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				201A91E622032F8D0002BD4C /* CellViewController.swift */,
 				2020E41E21F9AC16003401FB /* RequestsService.swift */,
 			);
 			path = Controller;
@@ -133,7 +147,7 @@
 			children = (
 				2084BD5B21FDF85600AE37BA /* Style */,
 				207DAF8D21FA521900BC0EF1 /* Tabs */,
-				5E6AF9D921FA2A3D00A3B5DC /* RequestsTableCell */,
+				5E6AF9D921FA2A3D00A3B5DC /* TableCells */,
 				C96EA65D21F8DBCC000517A3 /* LoginSecondViewController.swift */,
 				5E81E54921F9EFF5009A5A09 /* RegistrationViewController.swift */,
 				5EEB25FA21FB0B4100819F7C /* Main.storyboard */,
@@ -164,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				C920C6A821F8A4B200E553ED /* UITextField+Extension.swift */,
+				201A91EF220335620002BD4C /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */,
+				201A921C220349120002BD4C /* UserTableCell.xib in Resources */,
 				5EEB25FB21FB0B4100819F7C /* Main.storyboard in Resources */,
 				20EB00B521FCF6DA005607DB /* LaunchScreen.storyboard in Resources */,
 				C920C6AE21F8D14B00E553ED /* GoogleService-Info.plist in Resources */,
@@ -327,18 +343,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201A91E722032F8D0002BD4C /* CellViewController.swift in Sources */,
 				C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */,
 				2084BD6321FE3A1A00AE37BA /* UIStateLabel.swift in Sources */,
 				2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */,
 				5EEB261D21FC805300819F7C /* SendRequestViewController.swift in Sources */,
+				201A91F0220335620002BD4C /* UITableView+Extension.swift in Sources */,
 				C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */,
 				5E81E54A21F9EFF5009A5A09 /* RegistrationViewController.swift in Sources */,
 				2020E41F21F9AC16003401FB /* RequestsTableCell.swift in Sources */,
+				201A921B220349120002BD4C /* UserTableCell.swift in Sources */,
 				2020E42021F9AC16003401FB /* Request.swift in Sources */,
 				C96EA65E21F8DBCC000517A3 /* LoginSecondViewController.swift in Sources */,
 				2084BD5F21FE015100AE37BA /* UIResizedTextField.swift in Sources */,
 				207DAF9B21FA646500BC0EF1 /* ProfileViewController.swift in Sources */,
 				2084BD5D21FDF89A00AE37BA /* UIRoundedColoredButton.swift in Sources */,
+				201A91E522032E290002BD4C /* CurrentUser.swift in Sources */,
 				2020E42321F9AC16003401FB /* RequestsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

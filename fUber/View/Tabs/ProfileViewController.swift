@@ -17,10 +17,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var changeImageButton: UIButton!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var user: [String:Any]?;
+    var userData = ["name", "number", "email"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         signOutButton.clipsToBounds = true
         changeImageButton.layer.cornerRadius = 20
         changeImageButton.clipsToBounds = true
+    
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(nibName: "UserTableCell")
         
         setDataAboutUser()
     }
@@ -45,11 +51,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                     return
                 }
                 
-                let user = CurrentUser(uid: uid, dictionary: dict)
-                self.nameLabel.text = "Name: " + user.name
-                self.emailLabel.text = "Email: " + user.email
-                self.phoneLabel.text = "Phone number: " + user.number
-                
+                self.user = dict
+                self.reloadTableView()
             }) { (err) in
                 print(err)
             }
@@ -78,5 +81,28 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         performSegue(withIdentifier: "profileSignOutDummy", sender: nil)
     }
     
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+}
+
+
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64;
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userData.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableCell", for: indexPath) as? UserTableCell ?? UserTableCell()
+    
+        let i = indexPath.row
+        let key = userData[i]
+        cell.setData(key: userData[i], value: user?[key] as? String)
+ 
+        return cell
+    }
 }
