@@ -66,8 +66,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
-    // MARK: Actions:
-    
+    // MARK: Actions
     @IBAction func changeProfileImageTapped(_ sender: Any) {
         let myPickerController = UIImagePickerController()
         myPickerController.delegate = self
