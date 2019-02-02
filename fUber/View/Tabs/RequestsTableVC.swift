@@ -43,7 +43,7 @@ extension RequestsTableVC: UITableViewDelegate {
 
 extension RequestsTableVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90;
+        return 130;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -65,7 +65,8 @@ extension RequestsTableVC: UITableViewDataSource {
         
         let request = requestsService.requests[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "RequestsTableCell", for: indexPath) as? RequestsTableCell
-        cell?.setData(fromLocation: request.locationFrom.name,
+        cell?.setData(name:request.name,
+                      fromLocation: request.locationFrom.name,
                       toLocation: request.locationTo.name,
                       validTime: request.validTime)
         

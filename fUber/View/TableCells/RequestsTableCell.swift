@@ -10,6 +10,7 @@ import UIKit
 
 class RequestsTableCell: UITableViewCell {
     // MARK: Outlets
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var fromLocationLabel: UILabel!
     @IBOutlet weak var toLocationLabel: UILabel!
     @IBOutlet weak var validTillLabel: UILabel!
@@ -35,7 +36,8 @@ class RequestsTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setData(fromLocation: String, toLocation: String, validTime: Date) {
+    func setData(name: String, fromLocation: String, toLocation: String, validTime: Date) {
+        nameLabel!.text = name
         fromLocationLabel!.text = "  \(fromLocation)  "
         toLocationLabel!.text = "  \(toLocation)  "
         let dateFormatter = DateFormatter()
