@@ -37,7 +37,5 @@ class ChangeProfileViewController: UIViewController {
                 performSegue(withIdentifier: "ChangeToProfileDummy", sender: nil)
         }
     }
-    
-
 }
 

@@ -12,6 +12,11 @@
 		201A91F0220335620002BD4C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A91EF220335620002BD4C /* UITableView+Extension.swift */; };
 		201A921B220349120002BD4C /* UserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A9219220349120002BD4C /* UserTableCell.swift */; };
 		201A921C220349120002BD4C /* UserTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201A921A220349120002BD4C /* UserTableCell.xib */; };
+		201A921F220372750002BD4C /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201A921E220372750002BD4C /* Map.storyboard */; };
+		201A9221220373000002BD4C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A9220220373000002BD4C /* MapViewController.swift */; };
+		201A922322037F3A0002BD4C /* ChangeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A922222037F390002BD4C /* ChangeProfileViewController.swift */; };
+		201A922522037F8A0002BD4C /* String+Extentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A922422037F8A0002BD4C /* String+Extentsion.swift */; };
+		201A92272203856D0002BD4C /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A92262203856D0002BD4C /* LocationSearchTableViewController.swift */; };
 		2020E41F21F9AC16003401FB /* RequestsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41A21F9AC15003401FB /* RequestsTableCell.swift */; };
 		2020E42021F9AC16003401FB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020E41B21F9AC15003401FB /* Request.swift */; };
 		2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2020E41C21F9AC16003401FB /* RequestsTableCell.xib */; };
@@ -39,6 +44,11 @@
 		201A91EF220335620002BD4C /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		201A9219220349120002BD4C /* UserTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableCell.swift; sourceTree = "<group>"; };
 		201A921A220349120002BD4C /* UserTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableCell.xib; sourceTree = "<group>"; };
+		201A921E220372750002BD4C /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		201A9220220373000002BD4C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		201A922222037F390002BD4C /* ChangeProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileViewController.swift; sourceTree = "<group>"; };
+		201A922422037F8A0002BD4C /* String+Extentsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extentsion.swift"; sourceTree = "<group>"; };
+		201A92262203856D0002BD4C /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		2020E41A21F9AC15003401FB /* RequestsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsTableCell.swift; sourceTree = "<group>"; };
 		2020E41B21F9AC15003401FB /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		2020E41C21F9AC16003401FB /* RequestsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestsTableCell.xib; sourceTree = "<group>"; };
@@ -76,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201A921D22036F760002BD4C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				201A9220220373000002BD4C /* MapViewController.swift */,
+				201A921E220372750002BD4C /* Map.storyboard */,
+				201A92262203856D0002BD4C /* LocationSearchTableViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		207DAF8D21FA521900BC0EF1 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				201A91E622032F8D0002BD4C /* CellViewController.swift */,
+				201A922222037F390002BD4C /* ChangeProfileViewController.swift */,
 				2020E41E21F9AC16003401FB /* RequestsService.swift */,
 			);
 			path = Controller;
@@ -145,6 +166,7 @@
 		C920C69821F89A2200E553ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				201A921D22036F760002BD4C /* Map */,
 				2084BD5B21FDF85600AE37BA /* Style */,
 				207DAF8D21FA521900BC0EF1 /* Tabs */,
 				5E6AF9D921FA2A3D00A3B5DC /* TableCells */,
@@ -179,6 +201,7 @@
 			children = (
 				C920C6A821F8A4B200E553ED /* UITextField+Extension.swift */,
 				201A91EF220335620002BD4C /* UITableView+Extension.swift */,
+				201A922422037F8A0002BD4C /* String+Extentsion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2020E42121F9AC16003401FB /* RequestsTableCell.xib in Resources */,
+				201A921F220372750002BD4C /* Map.storyboard in Resources */,
 				201A921C220349120002BD4C /* UserTableCell.xib in Resources */,
 				5EEB25FB21FB0B4100819F7C /* Main.storyboard in Resources */,
 				20EB00B521FCF6DA005607DB /* LaunchScreen.storyboard in Resources */,
@@ -347,6 +371,9 @@
 				C920C6A921F8A4B200E553ED /* UITextField+Extension.swift in Sources */,
 				2084BD6321FE3A1A00AE37BA /* UIStateLabel.swift in Sources */,
 				2020E42221F9AC16003401FB /* RequestsTableVC.swift in Sources */,
+				201A92272203856D0002BD4C /* LocationSearchTableViewController.swift in Sources */,
+				201A922322037F3A0002BD4C /* ChangeProfileViewController.swift in Sources */,
+				201A922522037F8A0002BD4C /* String+Extentsion.swift in Sources */,
 				5EEB261D21FC805300819F7C /* SendRequestViewController.swift in Sources */,
 				201A91F0220335620002BD4C /* UITableView+Extension.swift in Sources */,
 				C9DA1F3421F7C4FB0095A0A8 /* AppDelegate.swift in Sources */,
@@ -356,6 +383,7 @@
 				2020E42021F9AC16003401FB /* Request.swift in Sources */,
 				C96EA65E21F8DBCC000517A3 /* LoginSecondViewController.swift in Sources */,
 				2084BD5F21FE015100AE37BA /* UIResizedTextField.swift in Sources */,
+				201A9221220373000002BD4C /* MapViewController.swift in Sources */,
 				207DAF9B21FA646500BC0EF1 /* ProfileViewController.swift in Sources */,
 				2084BD5D21FDF89A00AE37BA /* UIRoundedColoredButton.swift in Sources */,
 				201A91E522032E290002BD4C /* CurrentUser.swift in Sources */,
@@ -486,13 +514,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W5RL8N8363;
 				INFOPLIST_FILE = "$(SRCROOT)/fUber/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ucu.edu.ua.fUber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucu.edu.ua.projects.all.fUber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,13 +533,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W5RL8N8363;
 				INFOPLIST_FILE = "$(SRCROOT)/fUber/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ucu.edu.ua.fUber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucu.edu.ua.projects.all.fUber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

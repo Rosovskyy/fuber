@@ -10,18 +10,22 @@ import Foundation
 
 class Request {
     var userid: String?;
-    var time: Date;
-    var validTime: Date;
-    var locationFrom: String;
-    var locationTo: String;
-    var finished: Bool = false;
+    var name: String
+    var time: Date
+    var validTime: Date
+    var locationFrom: Location
+    var locationTo: Location
+    var description: String
+    var finished: Bool = false
     
-    init(userid: String?, time: Date, validTime: Date, locationFrom: String, locationTo: String) {
+    init(userid: String?, name: String, time: Date, validTime: Date, locationFrom: Location, locationTo: Location, description: String?) {
         self.userid = userid
+        self.name = name
         self.time = time
         self.validTime = validTime
         self.locationFrom = locationFrom
         self.locationTo = locationTo
+        self.description = description ?? ""
     }
     
     static let dateFormatter = DateFormatter()
@@ -38,20 +42,28 @@ class Request {
     class Location {
         var lat: Double;
         var lon: Double;
+        var name: String;
         
-        init(lat: Double, lon: Double) {
+        init(lat: Double, lon: Double, name: String?) {
             self.lat = lat
             self.lon = lon
+            self.name = name ?? ""
+        }
+        
+        func toDict() -> [String:String] {
+            return ["lat": "\(lat)", "lon": "\(lon)", "name": name]
         }
     }
     
-    func toDict() -> [String: String] {
+    func toDict() -> [String: Any] {
         return [
+            "name": name,
             "userid": userid ?? "nil",
             "time": Request.formatDate(time),
             "validTime": Request.formatDate(validTime),
-            "locationFrom": locationFrom,
-            "locationTo": locationTo
+            "locationFrom": locationFrom.toDict(),
+            "locationTo": locationTo.toDict(),
+            "description": description
         ]
     }
 }

@@ -65,7 +65,9 @@ extension RequestsTableVC: UITableViewDataSource {
         
         let request = requestsService.requests[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "RequestsTableCell", for: indexPath) as? RequestsTableCell
-        cell?.setData(fromLocation: request.locationFrom, toLocation: request.locationTo, validTime: request.validTime)
+        cell?.setData(fromLocation: request.locationFrom.name,
+                      toLocation: request.locationTo.name,
+                      validTime: request.validTime)
         
         return cell ??  RequestsTableCell()
     }

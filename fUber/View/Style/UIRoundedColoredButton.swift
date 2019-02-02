@@ -22,8 +22,8 @@ class UIRoundedColoredButton: UIButton {
     
     func customStyle() {
         self.backgroundColor = UIColor(red: 36 / 255, green: 145 / 255, blue: 92 / 255, alpha: 1)
-        self.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        self.titleLabel?.font = self.titleLabel?.font.withSize(22)
+        self.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: UIControl.State.normal)
+        self.titleLabel!.font = self.titleLabel?.font.withSize(22)
         self.clipsToBounds = true
         self.layer.cornerRadius = 20
         

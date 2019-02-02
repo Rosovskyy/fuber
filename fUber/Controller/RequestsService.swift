@@ -16,12 +16,7 @@ class RequestsService {
     static private var classInstance = RequestsService()
     
     private init() {
-        let reques = Request(userid: "hello123", time: Date(), validTime: Date().addingTimeInterval(TimeInterval(10000)), locationFrom: "Home", locationTo: "Wallmart")
-    
         getRequestsDefaultQueue()
-        for _ in 1...100 {
-            requests.append(reques)
-        }
     }
     
     // [START function_add_message]
@@ -78,12 +73,22 @@ class RequestsService {
                     
                     let uid = (requestDict["user"] as? [String: Any])?["uid"] as! String
                     
+                    let name = requestDict["name"] as! String
+                    let description = requestDict["description"] as? String
+                    
                     let time = Request.getDate(string: requestDict["time"] as! String)!
                     let validTime = Request.getDate(string: requestDict["validTime"] as! String)!
-                    let locationFrom = requestDict["locationFrom"] as! String
-                    let locationTo = requestDict["locationTo"] as! String
+                    let locationFromDict = requestDict["locationFrom"] as! [String: Any]
+                    let locationToDict = requestDict["locationTo"] as! [String: Any]
                     
-                    let newRequest = Request(userid: uid, time: time, validTime: validTime, locationFrom: locationFrom, locationTo: locationTo)
+                    let locationFrom = Request.Location(lat: Double(locationFromDict["lat"] as! String)!,
+                                                        lon: Double(locationFromDict["lon"] as! String)!,
+                                                        name: locationFromDict["name"] as? String)
+                    let locationTo = Request.Location(lat: Double(locationToDict["lat"] as! String)!,
+                                                        lon: Double(locationToDict["lon"] as! String)!,
+                                                        name: locationToDict["name"] as? String)
+                    
+                    let newRequest = Request(userid: uid, name: name, time: time, validTime: validTime, locationFrom: locationFrom, locationTo: locationTo, description: description)
                     self.requests.append(newRequest)
                 }
                 

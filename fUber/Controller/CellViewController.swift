@@ -22,8 +22,8 @@ class CellViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fromTextLabel.text = request?.locationFrom
-        toTextLabel.text = request?.locationTo
+        fromTextLabel.text = request?.locationFrom.name
+        toTextLabel.text = request?.locationTo.name
         timeTextField.text = Request.formatDate((request?.time)!)
         // validTimeTextField.text = Request.formatDate((request?.validTime)!)
     }
